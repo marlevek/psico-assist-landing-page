@@ -64,7 +64,7 @@ const DemoSection = styled.section`
 function DemoSectionComponent() {
   const handleDemoClick = () => {
     // Redireciona para o Railway (substitua pela URL real)
-    window.open('https://psicoassist-app.up.railway.app', '_blank');
+    window.open('https://psicoassist.up.railway.app/accounts/login/', '_blank');
   };
 
   return (

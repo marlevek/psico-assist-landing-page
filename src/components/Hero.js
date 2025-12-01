@@ -90,7 +90,7 @@ function Hero() {
           de trabalho clínico.
         </p>
         <div className="cta-buttons">
-          <a href="#demo" className="btn" style={{ background: '#ffd700', color: '#333' }}>
+          <a href="https://psicoassist.up.railway.app/accounts/login/" className="btn" style={{ background: '#ffd700', color: '#333' }}>
             🎯 Experimentar Demo Gratuita
           </a>
           <a href="#features" className="btn btn-outline" style={{ borderColor: '#ffd700', color: '#ffd700' }}>

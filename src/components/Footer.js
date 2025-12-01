@@ -119,7 +119,7 @@ function Footer() {
             <a href="#features">Funcionalidades de IA</a>
             <a href="#how-it-works">Como Funciona</a>
             <a href="#demo">Demo Gratuita</a>
-            <a href="https://psicoassist.codertec.com.br/" target="_blank" rel="noopener noreferrer">
+            <a href="https://psicoassist.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer">
               Versão Anterior
             </a>
             <a href="https://github.com/marlevek/psico_app" target="_blank" rel="noopener noreferrer">

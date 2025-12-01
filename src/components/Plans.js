@@ -163,6 +163,18 @@ const PlansSection = styled.section`
           color: white;
         }
       }
+
+      /* Estilo específico para botão de link externo */
+      &.external-link {
+        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        color: white;
+        
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+          background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+        }
+      }
     }
 
     .plan-note {
@@ -213,9 +225,9 @@ const Plans = () => {
         { text: "Suporte por email", checked: true },
         { text: "Sem cartão de crédito", checked: true }
       ],
-      buttonText: "Começar Teste Grátis",
-      buttonLink: "#demo",
-      buttonType: "primary",
+      buttonText: "🚀 Começar Teste Grátis",
+      buttonLink: "https://psicoassist.up.railway.app/accounts/login/",
+      buttonType: "external-link",
       featured: false,
       note: "Após 7 dias, escolha um plano para continuar"
     },
@@ -258,14 +270,22 @@ const Plans = () => {
     }
   ];
 
-  const handlePlanClick = (planName) => {
-    if (planName === "Teste Gratuito") {
-      // Rola até a seção de demo
-      document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // Para planos pagos, poderia abrir um formulário ou redirecionar
-      alert(`Em breve! O plano ${planName} estará disponível para compra.`);
+  const handlePlanClick = (plan) => {
+    if (plan.name === "Teste Gratuito") {
+      // Redireciona diretamente para o login do Django
+      window.open(plan.buttonLink, '_blank', 'noopener,noreferrer');
+    } else if (plan.name === "Psicólogo Individual" || plan.name === "Estudante") {
+      // Para planos pagos - pode abrir um modal ou redirecionar para checkout
+      alert(`🚀 Obrigado pelo interesse no plano ${plan.name}! Em breve você poderá assinar diretamente pelo site.`);
+      // Alternativa: redirecionar para página de checkout
+      // window.location.href = `/checkout?plan=${encodeURIComponent(plan.name)}`;
     }
+  };
+
+  const handleContactClick = () => {
+    alert('📧 Entre em contato para planos empresariais: contato@psicoassist.com.br\n📞 WhatsApp: (11) 99999-9999');
+    // Alternativa: abrir email client
+    // window.location.href = 'mailto:contato@psicoassist.com.br?subject=Orçamento para Clínica&body=Olá! Gostaria de solicitar um orçamento para minha clínica/instituição.';
   };
 
   return (
@@ -302,7 +322,7 @@ const Plans = () => {
 
               <button
                 className={`plan-button ${plan.buttonType}`}
-                onClick={() => handlePlanClick(plan.name)}
+                onClick={() => handlePlanClick(plan)}
               >
                 {plan.buttonText}
               </button>
@@ -322,7 +342,7 @@ const Plans = () => {
           </p>
           <button 
             className="plan-button secondary"
-            onClick={() => alert('Entre em contato: contato@psicoassist.com.br')}
+            onClick={handleContactClick}
           >
             👥 Solicitar Orçamento para Clínica
           </button>
