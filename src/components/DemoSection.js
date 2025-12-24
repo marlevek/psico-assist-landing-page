@@ -37,6 +37,121 @@ const DemoSection = styled.section`
     max-width: 800px;
     margin: 30px auto 0;
 
+  .demo-info h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+    .demo-features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .demo-feature {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #e9ecef;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .demo-feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .feature-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .feature-emoji {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+
+    .feature-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    .feature-items {
+      padding-left: 1.5rem;
+    }
+
+    .feature-item {
+      margin-bottom: 0.5rem;
+      color: #495057;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .feature-item:before {
+      content: "";
+      position: absolute;
+      left: -1.5rem;
+      top: 0.7rem;
+      width: 6px;
+      height: 6px;
+      background: #3498db;
+      border-radius: 50%;
+    }
+
+    .platform-features {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .platform-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .platform-emoji {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+
+    .platform-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0;
+      color: white;
+    }
+
+    .platform-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .platform-item {
+      padding: 0.5rem 0;
+      color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .platform-item:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+
     h4 {
       color: #4a6cf7;
       margin-bottom: 10px;
@@ -72,38 +187,94 @@ function DemoSectionComponent() {
       <div className="container">
         <h2>Experimente Grátis</h2>
         <p>
-          Teste todas as funcionalidades do Psico Assist por 14 dias sem compromisso. 
+          Teste todas as funcionalidades do Psico Assist por 14 dias sem compromisso.
           Não é necessário cartão de crédito.
         </p>
-        
+
         <div className="demo-container">
           <h3>Demo ao Vivo</h3>
           <p style={{ marginBottom: '30px' }}>
             Clique no botão abaixo para acessar a versão de demonstração completa
           </p>
-          <button 
-            onClick={handleDemoClick} 
+          <button
+            onClick={handleDemoClick}
             className="btn"
-            style={{ 
+            style={{
               padding: '15px 50px',
               fontSize: '1.1rem'
             }}
           >
-            Acessar Demo no Railway
+            Acessar Demo
           </button>
         </div>
 
         <div className="demo-info">
-          <h4>O que você vai encontrar na demo:</h4>
-          <ul>
-            <li>Sistema completo de agendamento</li>
-            <li>Prontuário eletrônico funcional</li>
-            <li>Módulo de teleconsulta</li>
-            <li>Gestão financeira básica</li>
-            <li>Painel administrativo</li>
-            <li>Área do paciente</li>
-          </ul>
+          <h4>🤖 REVOLUCIONE SUA PRÁTICA COM IA</h4>
+
+          <div className="demo-features-grid">
+            <div className="demo-feature">
+              <div className="feature-header">
+                <span className="feature-emoji">1️⃣</span>
+                <h5 className="feature-title">DOCUMENTAÇÃO INTELIGENTE</h5>
+              </div>
+              <div className="feature-items">
+                <div className="feature-item">↳ Transforme anotações em relatórios profissionais</div>
+                <div className="feature-item">↳ Análise automática de padrões de linguagem</div>
+                <div className="feature-item">↳ Sugestões de diagnóstico em segundos</div>
+              </div>
+            </div>
+
+            <div className="demo-feature">
+              <div className="feature-header">
+                <span className="feature-emoji">2️⃣</span>
+                <h5 className="feature-title">PLANOS DE TRATAMENTO COM IA</h5>
+              </div>
+              <div className="feature-items">
+                <div className="feature-item">↳ Crie planos personalizados em minutos</div>
+                <div className="feature-item">↳ Metas realistas e mensuráveis</div>
+                <div className="feature-item">↳ Acompanhamento visual do progresso</div>
+              </div>
+            </div>
+
+            <div className="demo-feature">
+              <div className="feature-header">
+                <span className="feature-emoji">3️⃣</span>
+                <h5 className="feature-title">EXERCÍCIOS TERAPÊUTICOS ÚNICOS</h5>
+              </div>
+              <div className="feature-items">
+                <div className="feature-item">↳ Gerados para cada abordagem teórica</div>
+                <div className="feature-item">↳ Personalizados por idade e tema</div>
+                <div className="feature-item">↳ Prontos para usar na próxima sessão</div>
+              </div>
+            </div>
+
+            <div className="demo-feature">
+              <div className="feature-header">
+                <span className="feature-emoji">4️⃣</span>
+                <h5 className="feature-title">CONTEÚDO QUE ENGAJA</h5>
+              </div>
+              <div className="feature-items">
+                <div className="feature-item">↳ Posts para redes sociais em 1 clique</div>
+                <div className="feature-item">↳ Materiais educativos para pacientes</div>
+                <div className="feature-item">↳ Artigos profissionais para seu blog</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="platform-features">
+            <div className="platform-header">
+              <span className="platform-emoji">➕</span>
+              <h5 className="platform-title">TUDO ISSO EM UMA PLATAFORMA:</h5>
+            </div>
+            <div className="platform-items">
+              <div className="platform-item">• Gestão completa de pacientes</div>
+              <div className="platform-item">• Dashboard com métricas em tempo real</div>
+              <div className="platform-item">• Exportação profissional em PDF</div>
+              <div className="platform-item">• Configurações do seu consultório</div>
+            </div>
+          </div>
         </div>
+
       </div>
     </DemoSection>
   );

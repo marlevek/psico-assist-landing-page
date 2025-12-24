@@ -133,12 +133,6 @@ function Footer() {
             &copy; {new Date().getFullYear()} Psico Assist AI. 
             Desenvolvido com ❤️ para psicólogos brasileiros.
           </p>
-          <p>
-            Este projeto é de código aberto. 
-            <a href="https://github.com/marlevek/psico_app" target="_blank" rel="noopener noreferrer">
-              Contribua no GitHub
-            </a>
-          </p>
         </div>
       </div>
     </FooterContainer>

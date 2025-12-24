@@ -245,7 +245,7 @@ const Plans = () => {
         { text: "Exportação em PDF", checked: true }
       ],
       buttonText: "Assinar Agora",
-      buttonLink: "#",
+      buttonLink: "https://psicoassist.up.railway.app/accounts/signup/?plano=profissional",
       buttonType: "primary",
       featured: true,
       note: "Cobrança mensal, cancele quando quiser"
@@ -263,7 +263,7 @@ const Plans = () => {
         { text: "Materiais educativos", checked: true }
       ],
       buttonText: "Plano Estudante",
-      buttonLink: "#",
+      buttonLink: "https://psicoassist.up.railway.app/accounts/signup/?plano=estudante",
       buttonType: "secondary",
       featured: false,
       note: "Necessário comprovante de matrícula"
@@ -271,16 +271,9 @@ const Plans = () => {
   ];
 
   const handlePlanClick = (plan) => {
-    if (plan.name === "Teste Gratuito") {
-      // Redireciona diretamente para o login do Django
-      window.open(plan.buttonLink, '_blank', 'noopener,noreferrer');
-    } else if (plan.name === "Psicólogo Individual" || plan.name === "Estudante") {
-      // Para planos pagos - pode abrir um modal ou redirecionar para checkout
-      alert(`🚀 Obrigado pelo interesse no plano ${plan.name}! Em breve você poderá assinar diretamente pelo site.`);
-      // Alternativa: redirecionar para página de checkout
-      // window.location.href = `/checkout?plan=${encodeURIComponent(plan.name)}`;
-    }
+    window.open(plan.buttonLink, '_blank', 'noopener,noreferrer');
   };
+
 
   const handleContactClick = () => {
     alert('📧 Entre em contato para planos empresariais: contato@psicoassist.com.br\n📞 WhatsApp: (11) 99999-9999');
@@ -298,8 +291,8 @@ const Plans = () => {
 
         <div className="plans-container">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`plan-card ${plan.featured ? 'featured' : ''}`}
             >
               <div className="plan-header">
@@ -326,7 +319,7 @@ const Plans = () => {
               >
                 {plan.buttonText}
               </button>
-              
+
               {plan.note && (
                 <p className="plan-note">{plan.note}</p>
               )}
@@ -337,10 +330,10 @@ const Plans = () => {
         <div className="enterprise-contact">
           <h3>👥 Precisa para sua clínica ou instituição?</h3>
           <p>
-            Desenvolvemos planos personalizados para clínicas com múltiplos psicólogos, 
+            Desenvolvemos planos personalizados para clínicas com múltiplos psicólogos,
             universidades ou instituições de saúde. Entre em contato para uma proposta.
           </p>
-          <button 
+          <button
             className="plan-button secondary"
             onClick={handleContactClick}
           >
