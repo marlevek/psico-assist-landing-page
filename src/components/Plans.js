@@ -1,4 +1,3 @@
-// src/components/Plans.js
 import React from 'react';
 import styled from 'styled-components';
 
@@ -17,7 +16,7 @@ const PlansSection = styled.section`
     text-align: center;
     color: #666;
     font-size: 1.1rem;
-    max-width: 600px;
+    max-width: 760px;
     margin: 0 auto 50px;
   }
 
@@ -50,7 +49,7 @@ const PlansSection = styled.section`
     &.featured {
       border-color: #667eea;
       background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
-      
+
       &::before {
         content: 'MAIS POPULAR';
         position: absolute;
@@ -114,7 +113,7 @@ const PlansSection = styled.section`
         }
 
         .check-icon {
-          color: #4CAF50;
+          color: #4caf50;
           font-weight: bold;
         }
 
@@ -164,15 +163,14 @@ const PlansSection = styled.section`
         }
       }
 
-      /* Estilo específico para botão de link externo */
       &.external-link {
-        background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
         color: white;
-        
+
         &:hover {
           transform: translateY(-3px);
           box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
-          background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+          background: linear-gradient(135deg, #45a049 0%, #4caf50 100%);
         }
       }
     }
@@ -208,65 +206,84 @@ const PlansSection = styled.section`
       margin-left: auto;
       margin-right: auto;
     }
+
+    .plan-button {
+      max-width: 360px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+      }
+    }
   }
 `;
 
 const Plans = () => {
   const plans = [
     {
-      name: "Teste Gratuito",
-      price: "R$ 0",
-      period: "/7 dias",
-      description: "Experimente todas as funcionalidades por 7 dias",
+      name: 'Teste Gratuito',
+      price: 'R$ 0',
+      period: '/7 dias',
+      description: 'Para conhecer a plataforma antes de levar o PsicoAssist para a rotina.',
       features: [
-        { text: "Todas as 4 ferramentas de IA", checked: true },
-        { text: "Até 10 documentos gerados", checked: true, limit: "10" },
-        { text: "Acesso à demo completa", checked: true },
-        { text: "Suporte por email", checked: true },
-        { text: "Sem cartão de crédito", checked: true }
+        { text: 'Todas as 4 áreas de apoio com IA', checked: true },
+        { text: 'Até 10 documentos gerados', checked: true, limit: '10' },
+        { text: 'Acesso à demonstração completa', checked: true },
+        { text: 'Suporte por email', checked: true },
+        { text: 'Sem cartão de crédito', checked: true }
       ],
-      buttonText: "🚀 Começar Teste Grátis",
-      buttonLink: "https://psicoassist.up.railway.app/accounts/login/",
-      buttonType: "external-link",
+      buttonText: 'Acessar demonstração',
+      buttonLink: 'https://psicoassist.up.railway.app/accounts/login/',
+      buttonType: 'external-link',
       featured: false,
-      note: "Após 7 dias, escolha um plano para continuar"
+      note: 'Conheça a solução sem compromisso'
     },
     {
-      name: "Psicólogo Individual",
-      price: "R$ 89",
-      period: "/mês",
-      description: "Ideal para psicólogos autônomos e consultórios pequenos",
+      name: 'Psicólogo Individual',
+      price: 'R$ 89',
+      period: '/mês',
+      description: 'Ideal para psicólogos(as) autônomos e consultórios que querem ganhar eficiência.',
       features: [
-        { text: "Todas as 4 ferramentas de IA", checked: true },
-        { text: "Documentos ilimitados", checked: true },
-        { text: "Suporte prioritário", checked: true },
-        { text: "Backup automático", checked: true },
-        { text: "Atualizações gratuitas", checked: true },
-        { text: "Exportação em PDF", checked: true }
+        { text: 'Todas as 4 áreas de apoio com IA', checked: true },
+        { text: 'Documentos ilimitados', checked: true },
+        { text: 'Suporte prioritário', checked: true },
+        { text: 'Backup automático', checked: true },
+        { text: 'Atualizações gratuitas', checked: true },
+        { text: 'Exportação em PDF', checked: true }
       ],
-      buttonText: "Assinar Agora",
-      buttonLink: "https://psicoassist.up.railway.app/accounts/signup/?plano=profissional",
-      buttonType: "primary",
+      buttonText: 'Começar agora',
+      buttonLink: 'https://psicoassist.up.railway.app/accounts/signup/?plano=profissional',
+      buttonType: 'primary',
       featured: true,
-      note: "Cobrança mensal, cancele quando quiser"
+      note: 'Cobrança mensal, com cancelamento a qualquer momento'
     },
     {
-      name: "Estudante",
-      price: "R$ 49",
-      period: "/mês",
-      description: "Para estudantes de psicologia em formação",
+      name: 'Estudante',
+      price: 'R$ 49',
+      period: '/mês',
+      description: 'Para quem está em formação e quer estruturar melhor a rotina com apoio de IA.',
       features: [
-        { text: "Todas as 4 ferramentas de IA", checked: true },
-        { text: "Até 50 documentos/mês", checked: true, limit: "50" },
-        { text: "Suporte básico", checked: true },
-        { text: "Exemplos de casos clínicos", checked: true },
-        { text: "Materiais educativos", checked: true }
+        { text: 'Todas as 4 áreas de apoio com IA', checked: true },
+        { text: 'Até 50 documentos por mês', checked: true, limit: '50' },
+        { text: 'Suporte básico', checked: true },
+        { text: 'Exemplos de casos clínicos', checked: true },
+        { text: 'Materiais educativos', checked: true }
       ],
-      buttonText: "Plano Estudante",
-      buttonLink: "https://psicoassist.up.railway.app/accounts/signup/?plano=estudante",
-      buttonType: "secondary",
+      buttonText: 'Conhecer plano estudante',
+      buttonLink: 'https://psicoassist.up.railway.app/accounts/signup/?plano=estudante',
+      buttonType: 'secondary',
       featured: false,
-      note: "Necessário comprovante de matrícula"
+      note: 'Necessário comprovante de matrícula'
     }
   ];
 
@@ -274,31 +291,29 @@ const Plans = () => {
     window.open(plan.buttonLink, '_blank', 'noopener,noreferrer');
   };
 
-
   const handleContactClick = () => {
-    alert('📧 Entre em contato para planos empresariais: contato@psicoassist.com.br\n📞 WhatsApp: (11) 99999-9999');
-    // Alternativa: abrir email client
-    // window.location.href = 'mailto:contato@psicoassist.com.br?subject=Orçamento para Clínica&body=Olá! Gostaria de solicitar um orçamento para minha clínica/instituição.';
+    window.location.href =
+      'mailto:suporte@codertec.com.br?subject=PsicoAssist%20-%20Contato%20para%20cl%C3%ADnica&body=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20o%20PsicoAssist%20para%20minha%20cl%C3%ADnica%20ou%20consult%C3%B3rio.';
   };
 
   return (
     <PlansSection id="plans">
       <div className="container">
-        <h2>Planos Acessíveis</h2>
+        <h2>Para quem o PsicoAssist serve</h2>
         <p className="section-subtitle">
-          Escolha o plano ideal para sua prática clínica. Todos incluem acesso completo às 4 ferramentas de IA.
+          Indicado para psicólogos(as) individuais, clínicas, consultórios e profissionais
+          em formação que precisam organizar melhor atendimentos, agenda, comunicação e
+          rotina operacional.
         </p>
 
         <div className="plans-container">
           {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`plan-card ${plan.featured ? 'featured' : ''}`}
-            >
+            <div key={index} className={`plan-card ${plan.featured ? 'featured' : ''}`}>
               <div className="plan-header">
                 <h3>{plan.name}</h3>
                 <div className="price">
-                  {plan.price}<span className="period">{plan.period}</span>
+                  {plan.price}
+                  <span className="period">{plan.period}</span>
                 </div>
                 <p className="plan-description">{plan.description}</p>
               </div>
@@ -313,31 +328,23 @@ const Plans = () => {
                 ))}
               </ul>
 
-              <button
-                className={`plan-button ${plan.buttonType}`}
-                onClick={() => handlePlanClick(plan)}
-              >
+              <button className={`plan-button ${plan.buttonType}`} onClick={() => handlePlanClick(plan)}>
                 {plan.buttonText}
               </button>
 
-              {plan.note && (
-                <p className="plan-note">{plan.note}</p>
-              )}
+              {plan.note && <p className="plan-note">{plan.note}</p>}
             </div>
           ))}
         </div>
 
         <div className="enterprise-contact">
-          <h3>👥 Precisa para sua clínica ou instituição?</h3>
+          <h3>Clínicas, consultórios e equipes</h3>
           <p>
-            Desenvolvemos planos personalizados para clínicas com múltiplos psicólogos,
-            universidades ou instituições de saúde. Entre em contato para uma proposta.
+            Se você precisa avaliar o PsicoAssist para uma operação com múltiplos
+            profissionais, fale com a CoderTec para entender a melhor forma de implantação.
           </p>
-          <button
-            className="plan-button secondary"
-            onClick={handleContactClick}
-          >
-            👥 Solicitar Orçamento para Clínica
+          <button className="plan-button secondary" onClick={handleContactClick}>
+            Falar com a CoderTec sobre o PsicoAssist
           </button>
         </div>
       </div>

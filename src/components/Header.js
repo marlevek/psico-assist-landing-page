@@ -12,19 +12,21 @@ const HeaderContainer = styled.header`
 `;
 
 const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 20px 0;
+  column-gap: 32px;
 
   .logo {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
     color: #667eea;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
+    white-space: nowrap;
 
     .ai-badge {
       font-size: 12px;
@@ -34,10 +36,9 @@ const Nav = styled.nav`
       border-radius: 20px;
     }
 
-    /* Responsivo para logo */
     @media (max-width: 768px) {
       font-size: 22px;
-      
+
       .ai-badge {
         font-size: 10px;
         padding: 3px 8px;
@@ -51,15 +52,17 @@ const Nav = styled.nav`
 
   .nav-links {
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    gap: 24px;
     align-items: center;
+    margin: 0 12px;
 
-    /* Responsivo para nav-links */
     @media (max-width: 992px) {
-      gap: 20px;
+      gap: 18px;
     }
 
     @media (max-width: 768px) {
+      display: flex;
       position: fixed;
       top: 80px;
       left: 0;
@@ -69,9 +72,9 @@ const Nav = styled.nav`
       gap: 0;
       padding: 20px 0;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      transform: ${props => props.$isMenuOpen ? 'translateY(0)' : 'translateY(-100%)'};
-      opacity: ${props => props.$isMenuOpen ? '1' : '0'};
-      visibility: ${props => props.$isMenuOpen ? 'visible' : 'hidden'};
+      transform: ${(props) => (props.$isMenuOpen ? 'translateY(0)' : 'translateY(-100%)')};
+      opacity: ${(props) => (props.$isMenuOpen ? '1' : '0')};
+      visibility: ${(props) => (props.$isMenuOpen ? 'visible' : 'hidden')};
       transition: all 0.3s ease;
       z-index: 999;
     }
@@ -82,6 +85,8 @@ const Nav = styled.nav`
       font-weight: 500;
       transition: color 0.3s;
       position: relative;
+      white-space: nowrap;
+      font-size: 0.98rem;
 
       &:hover {
         color: #667eea;
@@ -89,7 +94,7 @@ const Nav = styled.nav`
 
       &.active {
         color: #667eea;
-        
+
         &::after {
           content: '';
           position: absolute;
@@ -102,7 +107,6 @@ const Nav = styled.nav`
         }
       }
 
-      /* Responsivo para links */
       @media (max-width: 768px) {
         width: 100%;
         text-align: center;
@@ -126,13 +130,12 @@ const Nav = styled.nav`
       background: #f0f0f0;
       padding: 8px 15px;
       border-radius: 20px;
-      margin-left: 20px;
+      margin-left: 0;
 
       &:hover {
         background: #e0e0e0;
       }
 
-      /* Responsivo para github link */
       @media (max-width: 768px) {
         margin-left: 0;
         margin-top: 10px;
@@ -153,22 +156,21 @@ const Nav = styled.nav`
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
+    white-space: nowrap;
 
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
     }
 
-    /* Responsivo para botão */
     @media (max-width: 768px) {
-      display: none; /* Esconde o botão grande */
+      display: none;
     }
   }
 
-  /* Botão móvel */
   .mobile-header-btn {
     display: none;
-    
+
     @media (max-width: 768px) {
       display: inline-block;
       padding: 10px 20px;
@@ -189,6 +191,34 @@ const Nav = styled.nav`
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
       }
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .nav-links {
+      gap: 28px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: auto 1fr auto;
+    column-gap: 20px;
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .nav-links {
+      gap: 16px;
+      margin: 0;
+    }
+
+    .github-link {
+      padding: 8px 12px;
+    }
+
+    .header-btn {
+      padding: 12px 24px;
     }
   }
 `;
@@ -224,51 +254,57 @@ function Header() {
       <div className="container">
         <Nav $isMenuOpen={isMenuOpen}>
           <a href="/" className="logo">
-            Psico Assist <span className="ai-badge">AI</span>
+            PsicoAssist <span className="ai-badge">IA</span>
           </a>
-          
-          <MobileMenuButton onClick={toggleMenu}>
+
+          <MobileMenuButton onClick={toggleMenu} aria-label="Abrir ou fechar menu">
             {isMenuOpen ? '✕' : '☰'}
           </MobileMenuButton>
-          
+
           <div className="nav-links">
-            <a href="#features" onClick={closeMenu}>Funcionalidades</a>
-            <a href="#workflow" onClick={closeMenu}>Como Funciona</a>
-            <a href="#plans" onClick={closeMenu}>Planos</a>
-            <a href="#demo" onClick={closeMenu}>Demo</a>
-            <a 
-              href="https://github.com/marlevek/psico_app" 
-              target="_blank" 
+            <a href="#features" onClick={closeMenu}>
+              O que é
+            </a>
+            <a href="#workflow" onClick={closeMenu}>
+              Desafios
+            </a>
+            <a href="#plans" onClick={closeMenu}>
+              Para quem é
+            </a>
+            <a href="#demo" onClick={closeMenu}>
+              Demonstração
+            </a>
+            <a
+              href="https://github.com/marlevek/psico_app"
+              target="_blank"
               rel="noopener noreferrer"
               className="github-link"
               onClick={closeMenu}
             >
               <svg height="20" viewBox="0 0 16 16" width="20" fill="currentColor">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
               </svg>
               Código
             </a>
-            
-            {/* Botão para mobile */}
-            <a 
-              href="https://psicoassist.up.railway.app/accounts/login/" 
+
+            <a
+              href="https://psicoassist.up.railway.app/accounts/login/"
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-header-btn"
               onClick={closeMenu}
             >
-              🚀 Teste Grátis
+              Solicitar demonstração
             </a>
           </div>
-          
-          {/* Botão para desktop */}
-          <a 
-            href="https://psicoassist.up.railway.app/accounts/login/" 
+
+          <a
+            href="https://psicoassist.up.railway.app/accounts/login/"
             target="_blank"
             rel="noopener noreferrer"
             className="header-btn"
           >
-            Teste Grátis
+            Solicitar demonstração
           </a>
         </Nav>
       </div>

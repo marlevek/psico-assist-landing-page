@@ -23,7 +23,8 @@ const FooterContainer = styled.footer`
       gap: 10px;
     }
 
-    p, a {
+    p,
+    a {
       color: #b3b3cc;
       line-height: 1.8;
       text-decoration: none;
@@ -91,36 +92,38 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>🤖 Psico Assist AI</h3>
+            <h3>PsicoAssist</h3>
             <p>
-              Assistente de IA desenvolvido especificamente para psicólogos clínicos, 
-              focado em otimizar tarefas documentais e criar conteúdos personalizados.
+              Solução com IA e automação para psicólogos e clínicas que precisam organizar
+              melhor a rotina, reduzir tarefas manuais e ganhar eficiência operacional.
             </p>
             <div className="disclaimer">
-              ⚠️ Esta ferramenta auxilia o trabalho clínico, mas não substitui 
-              o julgamento profissional.
+              O PsicoAssist apoia a rotina clínica, mas não substitui o julgamento
+              profissional do psicólogo responsável.
             </div>
           </div>
 
           <div className="footer-section tech-stack">
-            <h3>💻 Tecnologias</h3>
+            <h3>Tecnologias</h3>
             <div className="tech-tags">
               {technologies.map((tech, index) => (
                 <span key={index}>{tech}</span>
               ))}
             </div>
-            <p style={{ marginTop: '20px' }}>
-              Código aberto disponível no GitHub
-            </p>
+            <p style={{ marginTop: '20px' }}>Código aberto disponível no GitHub</p>
           </div>
 
           <div className="footer-section">
-            <h3>🔗 Links</h3>
-            <a href="#features">Funcionalidades de IA</a>
-            <a href="#how-it-works">Como Funciona</a>
-            <a href="#demo">Demo Gratuita</a>
+            <h3>Links</h3>
+            <a href="#features">O que é o PsicoAssist</a>
+            <a href="#workflow">O que ajuda a resolver</a>
+            <a href="#plans">Para quem serve</a>
+            <a href="#demo">Solicitar demonstração</a>
+            <a href="/sobre/">Sobre</a>
+            <a href="/politica-de-privacidade/">Política de Privacidade</a>
+            <a href="/termos-de-uso/">Termos de Uso</a>
             <a href="https://psicoassist.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer">
-              Versão Anterior
+              Ambiente de demonstração
             </a>
             <a href="https://github.com/marlevek/psico_app" target="_blank" rel="noopener noreferrer">
               Repositório GitHub
@@ -129,10 +132,7 @@ function Footer() {
         </div>
 
         <div className="copyright">
-          <p>
-            &copy; {new Date().getFullYear()} Psico Assist AI. 
-            Desenvolvido com ❤️ para psicólogos brasileiros.
-          </p>
+          <p>&copy; {new Date().getFullYear()} PsicoAssist. Desenvolvido para psicólogos e clínicas.</p>
         </div>
       </div>
     </FooterContainer>

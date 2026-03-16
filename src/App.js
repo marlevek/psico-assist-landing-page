@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import AIFeatures from './components/AIFeatures';
 import Workflow from './components/Workflow';
-import Plans from './components/Plans';  // ← Adicionar esta linha
+import Plans from './components/Plans';
 import DemoSection from './components/DemoSection';
 import Footer from './components/Footer';
 
@@ -15,11 +15,13 @@ function App() {
     <Router>
       <GlobalStyles />
       <Header />
-      <Hero />
-      <AIFeatures />
-      <Workflow />
-      <Plans />  {/* ← Adicionar este componente */}
-      <DemoSection />
+      <main>
+        <Hero />
+        <AIFeatures />
+        <Workflow />
+        <Plans />
+        <DemoSection />
+      </main>
       <Footer />
     </Router>
   );

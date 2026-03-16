@@ -31,7 +31,7 @@ const HeroSection = styled.section`
     font-size: 3.5rem;
     margin-bottom: 20px;
     line-height: 1.2;
-    
+
     span {
       color: #ffd700;
     }
@@ -40,16 +40,16 @@ const HeroSection = styled.section`
   .subtitle {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    opacity: 0.9;
-    max-width: 800px;
+    opacity: 0.92;
+    max-width: 860px;
     margin-left: auto;
     margin-right: auto;
   }
 
   p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    max-width: 700px;
+    font-size: 1.15rem;
+    opacity: 0.85;
+    max-width: 760px;
     margin: 0 auto 40px;
   }
 
@@ -77,24 +77,25 @@ function Hero() {
   return (
     <HeroSection>
       <div className="container">
-        <div className="ai-badge">
-          🤖 Plataforma com Inteligência Artificial
-        </div>
-        <h1>Assistente de IA para <span>Psicólogos</span></h1>
+        <div className="ai-badge">Solução com IA e automação para a rotina clínica</div>
+        <h1>
+          PsicoAssist: <span>IA e automação</span> para psicólogos e clínicas
+        </h1>
         <div className="subtitle">
-          Automatize tarefas burocráticas e foque no que realmente importa: seu paciente
+          Organize atendimentos, reduza tarefas manuais e tenha mais apoio operacional
+          com uma solução pensada para psicólogos e clínicas.
         </div>
         <p>
-          O Psico Assist AI utiliza inteligência artificial para ajudar psicólogos 
-          a redigir documentos, criar exercícios personalizados e otimizar o tempo 
-          de trabalho clínico.
+          O PsicoAssist reúne organização, produtividade, comunicação e apoio com IA
+          para ajudar profissionais e equipes a ganharem eficiência sem perder qualidade
+          no atendimento.
         </p>
         <div className="cta-buttons">
-          <a href="https://psicoassist.up.railway.app/accounts/login/" className="btn" style={{ background: '#ffd700', color: '#333' }}>
-            🎯 Experimentar Demo Gratuita
+          <a href="#demo" className="btn" style={{ background: '#ffd700', color: '#333' }}>
+            Solicitar demonstração
           </a>
           <a href="#features" className="btn btn-outline" style={{ borderColor: '#ffd700', color: '#ffd700' }}>
-            📋 Ver Funcionalidades
+            Entender como funciona
           </a>
         </div>
       </div>

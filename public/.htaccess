@@ -1,0 +1,16 @@
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Entrega arquivos e diretórios reais primeiro.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Todo o restante cai na SPA principal.
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+DirectoryIndex index.html

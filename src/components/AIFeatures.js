@@ -16,7 +16,7 @@ const FeaturesSection = styled.section`
     text-align: center;
     color: #666;
     font-size: 1.1rem;
-    max-width: 600px;
+    max-width: 760px;
     margin: 0 auto 50px;
   }
 
@@ -96,7 +96,7 @@ const FeaturesSection = styled.section`
           color: #555;
 
           &:before {
-            content: "•";
+            content: '•';
             color: #667eea;
             font-weight: bold;
             margin-right: 10px;
@@ -109,40 +109,52 @@ const FeaturesSection = styled.section`
 
 const aiFeatures = [
   {
-    icon: "📝",
-    title: "Assistente de Documentação",
-    description: "Gera resumos profissionais de sessões a partir de anotações ou transcrições de áudio.",
-    details: {
-      inputs: ["Anotações da sessão", "Transcrição de áudio", "Temas discutidos"],
-      outputs: ["Resumo estruturado", "Pontos-chave", "Possíveis diagnósticos (CID-10/DSM-5)", "Padrões identificados"]
-    }
+    icon: '🗂️',
+    title: 'Organização da rotina clínica',
+    description:
+      'Centraliza informações importantes para acompanhar atendimentos, tarefas e próximos passos com mais clareza.',
+    helps: [
+      'Acompanhamento da rotina e dos atendimentos',
+      'Registro de informações relevantes',
+      'Mais previsibilidade no dia a dia clínico'
+    ],
+    benefits: ['Mais organização', 'Menos retrabalho', 'Rotina mais estruturada']
   },
   {
-    icon: "🏋️",
-    title: "Gerador de Exercícios",
-    description: "Cria tarefas personalizadas para pacientes baseadas na abordagem terapêutica.",
-    details: {
-      inputs: ["Abordagem (TCC, etc.)", "Tema da sessão", "Objetivos do paciente"],
-      outputs: ["Exercícios personalizados", "Tarefas de casa", "Materiais educativos", "Instruções passo a passo"]
-    }
+    icon: '⚙️',
+    title: 'Automação de tarefas manuais',
+    description:
+      'Reduz o tempo gasto com processos repetitivos para que a equipe foque no atendimento e nas decisões importantes.',
+    helps: [
+      'Atividades operacionais repetitivas',
+      'Fluxos internos que tomam tempo',
+      'Padronização de etapas da rotina'
+    ],
+    benefits: ['Mais produtividade', 'Menos tarefas manuais', 'Operação mais eficiente']
   },
   {
-    icon: "📊",
-    title: "Revisor de Plano de Tratamento",
-    description: "Ajuda a estruturar e revisar planos de tratamento de longo prazo.",
-    details: {
-      inputs: ["Metas do paciente", "Histórico clínico", "Abordagem preferida"],
-      outputs: ["Plano estruturado", "Checklist de coerência", "Sugestões de técnicas", "Linha do tempo sugerida"]
-    }
+    icon: '🤖',
+    title: 'Apoio com IA na produção de materiais',
+    description:
+      'Oferece apoio na criação de documentos, exercícios e conteúdos, sempre com revisão final do profissional.',
+    helps: [
+      'Estruturação de documentos clínicos',
+      'Criação de exercícios e materiais de apoio',
+      'Apoio na preparação de conteúdos'
+    ],
+    benefits: ['Mais agilidade', 'Apoio com IA', 'Mais consistência na entrega']
   },
   {
-    icon: "✍️",
-    title: "Criador de Conteúdo Educacional",
-    description: "Produz rascunhos de conteúdos sobre saúde mental para seus canais.",
-    details: {
-      inputs: ["Tema específico", "Público-alvo", "Tom desejado"],
-      outputs: ["Posts para redes sociais", "Textos educativos", "Artigo para Blog", "Material para Paciente", "Materiais para consultório"]
-    }
+    icon: '💬',
+    title: 'Comunicação e operação mais alinhadas',
+    description:
+      'Ajuda a dar mais consistência à rotina, à comunicação e ao acompanhamento operacional em consultórios e clínicas.',
+    helps: [
+      'Padronização de processos internos',
+      'Acompanhamento de demandas recorrentes',
+      'Mais clareza para a equipe e para o profissional'
+    ],
+    benefits: ['Menos ruído operacional', 'Mais eficiência', 'Atendimento mais organizado']
   }
 ];
 
@@ -150,31 +162,32 @@ function AIFeatures() {
   return (
     <FeaturesSection id="features">
       <div className="container">
-        <h2>Funcionalidades de IA</h2>
+        <h2>O que é o PsicoAssist</h2>
         <p className="section-subtitle">
-          4 ferramentas poderosas de inteligência artificial desenvolvidas especificamente 
-          para psicólogos clínicos
+          O PsicoAssist é uma solução digital para psicólogos e clínicas, com foco em
+          organização, produtividade, comunicação e apoio com IA para uma operação mais
+          eficiente.
         </p>
-        
+
         <div className="features-grid">
           {aiFeatures.map((feature, index) => (
             <div key={index} className="feature-card">
               <div className="feature-icon">{feature.icon}</div>
               <h3>{feature.title}</h3>
               <p className="feature-description">{feature.description}</p>
-              
+
               <div className="feature-details">
-                <strong>🎯 Entrada:</strong>
+                <strong>Ajuda com:</strong>
                 <ul>
-                  {feature.details.inputs.map((input, i) => (
-                    <li key={i}>{input}</li>
+                  {feature.helps.map((item, i) => (
+                    <li key={i}>{item}</li>
                   ))}
                 </ul>
-                
-                <strong>✨ Saída:</strong>
+
+                <strong>Benefícios:</strong>
                 <ul>
-                  {feature.details.outputs.map((output, i) => (
-                    <li key={i}>{output}</li>
+                  {feature.benefits.map((item, i) => (
+                    <li key={i}>{item}</li>
                   ))}
                 </ul>
               </div>

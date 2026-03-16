@@ -1,16 +1,23 @@
-// src/components/Workflow.js
 import React from 'react';
 import styled from 'styled-components';
 
-const WorkflowSection = styled.section`  // ← Nome alterado
+const WorkflowSection = styled.section`
   padding: 100px 0;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 
   h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: #333;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 760px;
+    margin: 0 auto 50px;
   }
 
   .steps-container {
@@ -85,12 +92,13 @@ const WorkflowSection = styled.section`  // ← Nome alterado
     margin-left: auto;
     margin-right: auto;
 
-    h4 {
+    h3 {
       color: #333;
       margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 10px;
+      font-size: 1.1rem;
     }
 
     p {
@@ -100,35 +108,43 @@ const WorkflowSection = styled.section`  // ← Nome alterado
   }
 `;
 
-function Workflow() {  // ← Nome da função alterado
+function Workflow() {
   const steps = [
     {
-      number: "1",
-      title: "Acesse a Plataforma",
-      description: "Faça login no Psico Assist AI através do seu navegador. Interface simples e intuitiva, sem necessidade de instalação."
+      number: '1',
+      title: 'Excesso de tarefas manuais',
+      description:
+        'Ajuda a reduzir o tempo gasto com atividades operacionais repetitivas que tiram foco do atendimento.'
     },
     {
-      number: "2",
-      title: "Escolha a Ferramenta",
-      description: "Selecione qual assistente de IA você precisa: documentação, exercícios, planos ou conteúdo."
+      number: '2',
+      title: 'Dificuldade para organizar a rotina e os atendimentos',
+      description:
+        'Traz mais clareza para acompanhar demandas, materiais e processos da rotina clínica com menos dispersão.'
     },
     {
-      number: "3",
-      title: "Insira os Dados",
-      description: "Forneça as informações básicas (anotações, abordagem, tema, etc.) para personalizar os resultados."
+      number: '3',
+      title: 'Falta de padronização',
+      description:
+        'Contribui para uma operação mais consistente, com apoio à organização de fluxos e entregas do dia a dia.'
     },
     {
-      number: "4",
-      title: "Revise e Personalize",
-      description: "Receba o conteúdo gerado pela IA e faça os ajustes finais conforme sua necessidade clínica."
+      number: '4',
+      title: 'Perda de tempo com processos repetitivos',
+      description:
+        'Apoia psicólogos e clínicas que precisam ganhar eficiência sem abrir mão da revisão e da qualidade profissional.'
     }
   ];
 
   return (
-    <WorkflowSection id="workflow">  {/* ← Id alterado */}
+    <WorkflowSection id="workflow">
       <div className="container">
-        <h2>Como Funciona</h2>
-        
+        <h2>O que o PsicoAssist ajuda a resolver</h2>
+        <p className="section-subtitle">
+          Veja os principais desafios que a solução ajuda a endereçar na rotina de
+          psicólogos, consultórios e clínicas.
+        </p>
+
         <div className="steps-container">
           {steps.map((step, index) => (
             <div key={index} className="step">
@@ -142,11 +158,10 @@ function Workflow() {  // ← Nome da função alterado
         </div>
 
         <div className="note-box">
-          <h4>⚠️ Importante: A IA é um Assistente, Não um Substituo</h4>
+          <h3>Importante: a tecnologia apoia, mas a decisão continua com o profissional</h3>
           <p>
-            Todas as ferramentas geram conteúdos que devem ser revisados e validados 
-            pelo profissional. A IA otimiza seu tempo, mas a decisão clínica final 
-            é sempre do psicólogo.
+            O PsicoAssist funciona como apoio operacional e assistente com IA. A revisão
+            e a decisão clínica final continuam sempre com o psicólogo responsável.
           </p>
         </div>
       </div>
@@ -154,4 +169,4 @@ function Workflow() {  // ← Nome da função alterado
   );
 }
 
-export default Workflow;  // ← Export com nome alterado
+export default Workflow;
