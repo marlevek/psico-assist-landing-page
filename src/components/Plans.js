@@ -273,11 +273,11 @@ const Plans = () => {
       period: '/mês',
       description: 'Para quem está em formação e quer estruturar melhor a rotina com apoio de IA.',
       features: [
-        { text: 'Todas as 4 áreas de apoio com IA', checked: true },
-        { text: 'Até 50 documentos por mês', checked: true, limit: '50' },
+        { text: '4 áreas de apoio com IA para estudo e estágio', checked: true },
+        { text: 'Até 50 gerações por mês entre casos, atividades e materiais', checked: true, limit: '50' },
         { text: 'Suporte básico', checked: true },
-        { text: 'Exemplos de casos clínicos', checked: true },
-        { text: 'Materiais educativos', checked: true }
+        { text: 'Exemplos de casos clínicos para estudo', checked: true },
+        { text: 'Materiais educativos e fichas para imprimir', checked: true }
       ],
       buttonText: 'Conhecer plano estudante',
       buttonLink: 'https://psicoassist.up.railway.app/accounts/signup/?plano=estudante',
