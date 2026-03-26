@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Hero from './components/Hero';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renderiza o título principal da landing', () => {
+  render(<Hero />);
+  const headingElement = screen.getByRole('heading', {
+    name: /psicoassist: organize sua rotina clínica com mais praticidade/i
+  });
+  expect(headingElement).toBeInTheDocument();
 });

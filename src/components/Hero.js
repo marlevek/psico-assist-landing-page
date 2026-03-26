@@ -71,33 +71,40 @@ const HeroSection = styled.section`
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
+
+  .microcopy {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    opacity: 0.82;
+  }
 `;
 
 function Hero() {
   return (
     <HeroSection>
       <div className="container">
-        <div className="ai-badge">Solução com IA e automação para a rotina clínica</div>
+        <div className="ai-badge">Organização clínica com apoio de IA e automação</div>
         <h1>
-          PsicoAssist: <span>IA e automação</span> para psicólogos e clínicas
+          PsicoAssist: <span>organize sua rotina clínica</span> com mais praticidade
         </h1>
         <div className="subtitle">
-          Organize atendimentos, reduza tarefas manuais e tenha mais apoio operacional
-          com uma solução pensada para psicólogos e clínicas.
+          Gerencie pacientes, agenda e sua operação em um só lugar. E se você está vindo
+          de outro sistema, comece mais rápido importando seus dados com facilidade.
         </div>
         <p>
-          O PsicoAssist reúne organização, produtividade, comunicação e apoio com IA
-          para ajudar profissionais e equipes a ganharem eficiência sem perder qualidade
-          no atendimento.
+          O PsicoAssist reúne organização, produtividade, comunicação e apoio operacional
+          para ajudar psicólogos e clínicas a estruturarem a rotina sem precisar começar
+          tudo do zero.
         </p>
         <div className="cta-buttons">
-          <a href="#demo" className="btn" style={{ background: '#ffd700', color: '#333' }}>
-            Solicitar demonstração
+          <a href="#plans" className="btn" style={{ background: '#ffd700', color: '#333' }}>
+            Começar teste grátis
           </a>
           <a href="#features" className="btn btn-outline" style={{ borderColor: '#ffd700', color: '#ffd700' }}>
-            Entender como funciona
+            Ver como funciona
           </a>
         </div>
+        <p className="microcopy">Comece sem precisar organizar tudo do zero.</p>
       </div>
     </HeroSection>
   );

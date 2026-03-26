@@ -265,14 +265,14 @@ function Header() {
             <a href="#features" onClick={closeMenu}>
               O que é
             </a>
-            <a href="#workflow" onClick={closeMenu}>
-              Desafios
+            <a href="#migration" onClick={closeMenu}>
+              Migração
             </a>
             <a href="#plans" onClick={closeMenu}>
               Para quem é
             </a>
-            <a href="#demo" onClick={closeMenu}>
-              Demonstração
+            <a href="#faq" onClick={closeMenu}>
+              FAQ
             </a>
             <a
               href="https://github.com/marlevek/psico_app"
@@ -287,24 +287,13 @@ function Header() {
               Código
             </a>
 
-            <a
-              href="https://psicoassist.up.railway.app/accounts/login/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mobile-header-btn"
-              onClick={closeMenu}
-            >
-              Solicitar demonstração
+            <a href="#plans" className="mobile-header-btn" onClick={closeMenu}>
+              Começar teste grátis
             </a>
           </div>
 
-          <a
-            href="https://psicoassist.up.railway.app/accounts/login/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="header-btn"
-          >
-            Solicitar demonstração
+          <a href="#plans" className="header-btn">
+            Começar teste grátis
           </a>
         </Nav>
       </div>

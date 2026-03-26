@@ -17,7 +17,14 @@ const PlansSection = styled.section`
     color: #666;
     font-size: 1.1rem;
     max-width: 760px;
-    margin: 0 auto 50px;
+    margin: 0 auto 18px;
+  }
+
+  .section-microcopy {
+    text-align: center;
+    color: #667085;
+    font-size: 0.95rem;
+    margin-bottom: 50px;
   }
 
   .plans-container {
@@ -234,7 +241,8 @@ const Plans = () => {
       name: 'Teste Gratuito',
       price: 'R$ 0',
       period: '/7 dias',
-      description: 'Para conhecer a plataforma antes de levar o PsicoAssist para a rotina.',
+      description:
+        'Para conhecer a plataforma e avaliar com calma como organizar sua rotina no PsicoAssist.',
       features: [
         { text: 'Todas as 4 áreas de apoio com IA', checked: true },
         { text: 'Até 10 documentos gerados', checked: true, limit: '10' },
@@ -242,7 +250,7 @@ const Plans = () => {
         { text: 'Suporte por email', checked: true },
         { text: 'Sem cartão de crédito', checked: true }
       ],
-      buttonText: 'Acessar demonstração',
+      buttonText: 'Começar teste grátis',
       buttonLink: 'https://psicoassist.up.railway.app/accounts/login/',
       buttonType: 'external-link',
       featured: false,
@@ -252,7 +260,8 @@ const Plans = () => {
       name: 'Psicólogo Individual',
       price: 'R$ 89',
       period: '/mês',
-      description: 'Ideal para psicólogos(as) autônomos e consultórios que querem ganhar eficiência.',
+      description:
+        'Ideal para psicólogos(as) autônomos e consultórios que querem ganhar eficiência.',
       features: [
         { text: 'Todas as 4 áreas de apoio com IA', checked: true },
         { text: 'Documentos ilimitados', checked: true },
@@ -271,7 +280,8 @@ const Plans = () => {
       name: 'Estudante',
       price: 'R$ 49',
       period: '/mês',
-      description: 'Para quem está em formação e quer estruturar melhor a rotina com apoio de IA.',
+      description:
+        'Para quem está em formação e quer estruturar melhor a rotina com apoio de IA.',
       features: [
         { text: '4 áreas de apoio com IA para estudo e estágio', checked: true },
         { text: 'Até 50 gerações por mês entre casos, atividades e materiais', checked: true, limit: '50' },
@@ -304,6 +314,10 @@ const Plans = () => {
           Indicado para psicólogos(as) individuais, clínicas, consultórios e profissionais
           em formação que precisam organizar melhor atendimentos, agenda, comunicação e
           rotina operacional.
+        </p>
+        <p className="section-microcopy">
+          Comece sem precisar organizar tudo do zero e escolha a forma ideal de testar ou
+          contratar o PsicoAssist.
         </p>
 
         <div className="plans-container">

@@ -28,6 +28,12 @@ const DemoSection = styled.section`
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
 
+  .cta-microcopy {
+    margin-top: 16px;
+    font-size: 0.95rem;
+    color: #6c757d;
+  }
+
   .demo-info {
     margin-top: 30px;
     padding: 20px;
@@ -155,34 +161,27 @@ const DemoSection = styled.section`
 `;
 
 function DemoSectionComponent() {
-  const handleDemoClick = () => {
-    window.open('https://psicoassist.up.railway.app/accounts/login/', '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <DemoSection id="demo">
       <div className="container">
-        <h2>Solicite uma demonstração do PsicoAssist</h2>
+        <h2>Teste o PsicoAssist e comece com mais organização desde o primeiro dia</h2>
         <p>
-          Veja na prática como o PsicoAssist ajuda psicólogos e clínicas a organizar
-          atendimentos, reduzir tarefas manuais e operar com mais eficiência.
+          Centralize sua rotina clínica e, se estiver vindo de outro sistema, acelere sua
+          transição com uma migração simples dos dados essenciais.
         </p>
 
         <div className="demo-container">
-          <h3>Demonstração prática</h3>
+          <h3>Pronto para dar o próximo passo?</h3>
           <p style={{ marginBottom: '30px' }}>
-            Acesse o ambiente de demonstração e conheça a solução em funcionamento.
+            Escolha a melhor forma de começar e veja como o PsicoAssist ajuda a organizar
+            sua rotina com mais rapidez.
           </p>
-          <button
-            onClick={handleDemoClick}
-            className="btn"
-            style={{
-              padding: '15px 50px',
-              fontSize: '1.1rem'
-            }}
-          >
-            Acessar demonstração
-          </button>
+          <a href="#plans" className="btn" style={{ padding: '15px 50px', fontSize: '1.1rem' }}>
+            Começar teste grátis
+          </a>
+          <p className="cta-microcopy">
+            Transição mais prática para quem vem de outro sistema.
+          </p>
         </div>
 
         <div className="demo-info">

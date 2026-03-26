@@ -130,9 +130,9 @@ function Workflow() {
     },
     {
       number: '4',
-      title: 'Perda de tempo com processos repetitivos',
+      title: 'Troca de sistema com muita fricção',
       description:
-        'Apoia psicólogos e clínicas que precisam ganhar eficiência sem abrir mão da revisão e da qualidade profissional.'
+        'Ajuda psicólogos e clínicas a iniciarem com mais rapidez ao importar pacientes e agenda futura sem depender de cadastro manual.'
     }
   ];
 

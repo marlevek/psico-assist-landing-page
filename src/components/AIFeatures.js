@@ -155,6 +155,18 @@ const aiFeatures = [
       'Mais clareza para a equipe e para o profissional'
     ],
     benefits: ['Menos ruído operacional', 'Mais eficiência', 'Atendimento mais organizado']
+  },
+  {
+    icon: '🔄',
+    title: 'Migração facilitada',
+    description:
+      'Importe pacientes e agenda futura para começar no PsicoAssist com menos esforço.',
+    helps: [
+      'Transição mais prática para quem vem de outro sistema',
+      'Organização inicial sem retrabalho desnecessário',
+      'Continuidade da agenda futura com mais clareza'
+    ],
+    benefits: ['Início mais rápido', 'Menos esforço manual', 'Troca com mais segurança']
   }
 ];
 
@@ -165,8 +177,8 @@ function AIFeatures() {
         <h2>O que é o PsicoAssist</h2>
         <p className="section-subtitle">
           O PsicoAssist é uma solução digital para psicólogos e clínicas, com foco em
-          organização, produtividade, comunicação e apoio com IA para uma operação mais
-          eficiente.
+          organização, produtividade, comunicação e apoio à rotina clínica para uma
+          operação mais eficiente desde o primeiro dia.
         </p>
 
         <div className="features-grid">

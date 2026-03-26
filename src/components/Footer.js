@@ -116,9 +116,11 @@ function Footer() {
           <div className="footer-section">
             <h3>Links</h3>
             <a href="#features">O que é o PsicoAssist</a>
+            <a href="#migration">Migração</a>
             <a href="#workflow">O que ajuda a resolver</a>
             <a href="#plans">Para quem serve</a>
-            <a href="#demo">Solicitar demonstração</a>
+            <a href="#faq">Perguntas frequentes</a>
+            <a href="#demo">Começar teste grátis</a>
             <a href="/sobre/">Sobre</a>
             <a href="/politica-de-privacidade/">Política de Privacidade</a>
             <a href="/termos-de-uso/">Termos de Uso</a>
