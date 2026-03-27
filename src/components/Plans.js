@@ -242,7 +242,7 @@ const Plans = () => {
       price: 'R$ 0',
       period: '/7 dias',
       description:
-        'Para conhecer a plataforma e avaliar com calma como organizar sua rotina no PsicoAssist.',
+        'Para conhecer a plataforma e avaliar com calma como organizar sua rotina no PsicoSense.',
       features: [
         { text: 'Todas as 4 áreas de apoio com IA', checked: true },
         { text: 'Até 10 documentos gerados', checked: true, limit: '10' },
@@ -251,7 +251,7 @@ const Plans = () => {
         { text: 'Sem cartão de crédito', checked: true }
       ],
       buttonText: 'Começar teste grátis',
-      buttonLink: 'https://psicoassist.up.railway.app/accounts/login/',
+      buttonLink: 'https://app.psicosense.com.br/accounts/login/',
       buttonType: 'external-link',
       featured: false,
       note: 'Conheça a solução sem compromisso'
@@ -271,7 +271,7 @@ const Plans = () => {
         { text: 'Exportação em PDF', checked: true }
       ],
       buttonText: 'Começar agora',
-      buttonLink: 'https://psicoassist.up.railway.app/accounts/signup/?plano=profissional',
+      buttonLink: 'https://app.psicosense.com.br/accounts/signup/?plano=profissional',
       buttonType: 'primary',
       featured: true,
       note: 'Cobrança mensal, com cancelamento a qualquer momento'
@@ -290,7 +290,7 @@ const Plans = () => {
         { text: 'Materiais educativos e fichas para imprimir', checked: true }
       ],
       buttonText: 'Conhecer plano estudante',
-      buttonLink: 'https://psicoassist.up.railway.app/accounts/signup/?plano=estudante',
+      buttonLink: 'https://app.psicosense.com.br/accounts/signup/?plano=estudante',
       buttonType: 'secondary',
       featured: false,
       note: 'Necessário comprovante de matrícula'
@@ -303,13 +303,13 @@ const Plans = () => {
 
   const handleContactClick = () => {
     window.location.href =
-      'mailto:suporte@codertec.com.br?subject=PsicoAssist%20-%20Contato%20para%20cl%C3%ADnica&body=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20o%20PsicoAssist%20para%20minha%20cl%C3%ADnica%20ou%20consult%C3%B3rio.';
+      'mailto:suporte@codertec.com.br?subject=PsicoSense%20-%20Contato%20para%20cl%C3%ADnica&body=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20o%20PsicoSense%20para%20minha%20cl%C3%ADnica%20ou%20consult%C3%B3rio.';
   };
 
   return (
     <PlansSection id="plans">
       <div className="container">
-        <h2>Para quem o PsicoAssist serve</h2>
+        <h2>Para quem o PsicoSense serve</h2>
         <p className="section-subtitle">
           Indicado para psicólogos(as) individuais, clínicas, consultórios e profissionais
           em formação que precisam organizar melhor atendimentos, agenda, comunicação e
@@ -317,7 +317,7 @@ const Plans = () => {
         </p>
         <p className="section-microcopy">
           Comece sem precisar organizar tudo do zero e escolha a forma ideal de testar ou
-          contratar o PsicoAssist.
+          contratar o PsicoSense.
         </p>
 
         <div className="plans-container">
@@ -354,11 +354,11 @@ const Plans = () => {
         <div className="enterprise-contact">
           <h3>Clínicas, consultórios e equipes</h3>
           <p>
-            Se você precisa avaliar o PsicoAssist para uma operação com múltiplos
+            Se você precisa avaliar o PsicoSense para uma operação com múltiplos
             profissionais, fale com a CoderTec para entender a melhor forma de implantação.
           </p>
           <button className="plan-button secondary" onClick={handleContactClick}>
-            Falar com a CoderTec sobre o PsicoAssist
+            Falar com a CoderTec sobre o PsicoSense
           </button>
         </div>
       </div>

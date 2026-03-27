@@ -139,7 +139,7 @@ function Workflow() {
   return (
     <WorkflowSection id="workflow">
       <div className="container">
-        <h2>O que o PsicoAssist ajuda a resolver</h2>
+        <h2>O que o PsicoSense ajuda a resolver</h2>
         <p className="section-subtitle">
           Veja os principais desafios que a solução ajuda a endereçar na rotina de
           psicólogos, consultórios e clínicas.
@@ -160,7 +160,7 @@ function Workflow() {
         <div className="note-box">
           <h3>Importante: a tecnologia apoia, mas a decisão continua com o profissional</h3>
           <p>
-            O PsicoAssist funciona como apoio operacional e assistente com IA. A revisão
+            O PsicoSense funciona como apoio operacional e assistente com IA. A revisão
             e a decisão clínica final continuam sempre com o psicólogo responsável.
           </p>
         </div>

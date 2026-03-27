@@ -92,13 +92,13 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>PsicoAssist</h3>
+            <h3>PsicoSense</h3>
             <p>
               Solução com IA e automação para psicólogos e clínicas que precisam organizar
               melhor a rotina, reduzir tarefas manuais e ganhar eficiência operacional.
             </p>
             <div className="disclaimer">
-              O PsicoAssist apoia a rotina clínica, mas não substitui o julgamento
+              O PsicoSense apoia a rotina clínica, mas não substitui o julgamento
               profissional do psicólogo responsável.
             </div>
           </div>
@@ -110,12 +110,11 @@ function Footer() {
                 <span key={index}>{tech}</span>
               ))}
             </div>
-            <p style={{ marginTop: '20px' }}>Código aberto disponível no GitHub</p>
           </div>
 
           <div className="footer-section">
             <h3>Links</h3>
-            <a href="#features">O que é o PsicoAssist</a>
+            <a href="#features">O que é o PsicoSense</a>
             <a href="#migration">Migração</a>
             <a href="#workflow">O que ajuda a resolver</a>
             <a href="#plans">Para quem serve</a>
@@ -124,17 +123,14 @@ function Footer() {
             <a href="/sobre/">Sobre</a>
             <a href="/politica-de-privacidade/">Política de Privacidade</a>
             <a href="/termos-de-uso/">Termos de Uso</a>
-            <a href="https://psicoassist.up.railway.app/accounts/login/" target="_blank" rel="noopener noreferrer">
+            <a href="https://app.psicosense.com.br/accounts/login/" target="_blank" rel="noopener noreferrer">
               Ambiente de demonstração
-            </a>
-            <a href="https://github.com/marlevek/psico_app" target="_blank" rel="noopener noreferrer">
-              Repositório GitHub
             </a>
           </div>
         </div>
 
         <div className="copyright">
-          <p>&copy; {new Date().getFullYear()} PsicoAssist. Desenvolvido para psicólogos e clínicas.</p>
+          <p>&copy; {new Date().getFullYear()} PsicoSense. Desenvolvido para psicólogos e clínicas.</p>
         </div>
       </div>
     </FooterContainer>

@@ -85,14 +85,14 @@ function Hero() {
       <div className="container">
         <div className="ai-badge">Organização clínica com apoio de IA e automação</div>
         <h1>
-          PsicoAssist: <span>organize sua rotina clínica</span> com mais praticidade
+          PsicoSense: <span>organize sua rotina clínica</span> com mais praticidade
         </h1>
         <div className="subtitle">
           Gerencie pacientes, agenda e sua operação em um só lugar. E se você está vindo
           de outro sistema, comece mais rápido importando seus dados com facilidade.
         </div>
         <p>
-          O PsicoAssist reúne organização, produtividade, comunicação e apoio operacional
+          O PsicoSense reúne organização, produtividade, comunicação e apoio operacional
           para ajudar psicólogos e clínicas a estruturarem a rotina sem precisar começar
           tudo do zero.
         </p>

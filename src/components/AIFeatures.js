@@ -160,7 +160,7 @@ const aiFeatures = [
     icon: '🔄',
     title: 'Migração facilitada',
     description:
-      'Importe pacientes e agenda futura para começar no PsicoAssist com menos esforço.',
+      'Importe pacientes e agenda futura para começar no PsicoSense com menos esforço.',
     helps: [
       'Transição mais prática para quem vem de outro sistema',
       'Organização inicial sem retrabalho desnecessário',
@@ -174,9 +174,9 @@ function AIFeatures() {
   return (
     <FeaturesSection id="features">
       <div className="container">
-        <h2>O que é o PsicoAssist</h2>
+        <h2>O que é o PsicoSense</h2>
         <p className="section-subtitle">
-          O PsicoAssist é uma solução digital para psicólogos e clínicas, com foco em
+          O PsicoSense é uma solução digital para psicólogos e clínicas, com foco em
           organização, produtividade, comunicação e apoio à rotina clínica para uma
           operação mais eficiente desde o primeiro dia.
         </p>

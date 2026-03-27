@@ -50,9 +50,9 @@ const FAQWrapper = styled.section`
 
 const questions = [
   {
-    question: 'Consigo migrar de outro sistema para o PsicoAssist?',
+    question: 'Consigo migrar de outro sistema para o PsicoSense?',
     answer:
-      'Sim. Você pode importar pacientes e agenda futura por arquivo CSV para começar mais rápido. Isso ajuda a evitar retrabalho e facilita a transição de outro sistema para o PsicoAssist.'
+      'Sim. Você pode importar pacientes e agenda futura por arquivo CSV para começar mais rápido. Isso ajuda a evitar retrabalho e facilita a transição de outro sistema para o PsicoSense.'
   },
   {
     question: 'Preciso cadastrar tudo manualmente ao começar?',
@@ -60,7 +60,7 @@ const questions = [
       'Não necessariamente. Se você já tiver seus dados organizados em arquivo CSV, pode importar as informações essenciais e ganhar tempo no início do uso.'
   },
   {
-    question: 'O PsicoAssist serve para quem quer organizar a rotina desde o primeiro dia?',
+    question: 'O PsicoSense serve para quem quer organizar a rotina desde o primeiro dia?',
     answer:
       'Sim. A proposta é centralizar pacientes, agenda e operação clínica em um só lugar para que a adaptação aconteça com mais clareza e menos esforço desde o início.'
   }
@@ -72,7 +72,7 @@ function FAQSection() {
       <div className="container">
         <h2>Perguntas frequentes</h2>
         <p className="section-subtitle">
-          Entenda como funciona o início no PsicoAssist para quem quer organizar a rotina
+          Entenda como funciona o início no PsicoSense para quem quer organizar a rotina
           clínica com mais rapidez, inclusive na troca de sistema.
         </p>
 

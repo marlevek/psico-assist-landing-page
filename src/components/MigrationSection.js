@@ -89,7 +89,7 @@ function MigrationSection() {
       <div className="container">
         <h2>Trocar de sistema não precisa ser complicado</h2>
         <p className="section-intro">
-          Se você já usa outro sistema, o PsicoAssist ajuda você a começar com tudo mais
+          Se você já usa outro sistema, o PsicoSense ajuda você a começar com tudo mais
           organizado. Importe pacientes e agenda futura por arquivo CSV e ganhe tempo na
           transição.
         </p>

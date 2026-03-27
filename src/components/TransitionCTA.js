@@ -41,13 +41,13 @@ function TransitionCTA() {
     <TransitionCTASection>
       <div className="container">
         <div className="cta-box">
-          <h2>Comece no PsicoAssist sem perder tempo organizando tudo do zero</h2>
+          <h2>Comece no PsicoSense sem perder tempo organizando tudo do zero</h2>
           <p>
             Se você já usa outro sistema, a migração dos dados essenciais ajuda a
             acelerar sua adaptação.
           </p>
           <a href="#plans" className="btn" style={{ background: '#ffd700', color: '#333' }}>
-            Quero testar o PsicoAssist
+            Quero testar o PsicoSense
           </a>
           <span className="cta-note">
             Importação simples de pacientes e agenda futura para uma transição mais prática.

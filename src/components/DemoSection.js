@@ -164,7 +164,7 @@ function DemoSectionComponent() {
   return (
     <DemoSection id="demo">
       <div className="container">
-        <h2>Teste o PsicoAssist e comece com mais organização desde o primeiro dia</h2>
+        <h2>Teste o PsicoSense e comece com mais organização desde o primeiro dia</h2>
         <p>
           Centralize sua rotina clínica e, se estiver vindo de outro sistema, acelere sua
           transição com uma migração simples dos dados essenciais.
@@ -173,7 +173,7 @@ function DemoSectionComponent() {
         <div className="demo-container">
           <h3>Pronto para dar o próximo passo?</h3>
           <p style={{ marginBottom: '30px' }}>
-            Escolha a melhor forma de começar e veja como o PsicoAssist ajuda a organizar
+            Escolha a melhor forma de começar e veja como o PsicoSense ajuda a organizar
             sua rotina com mais rapidez.
           </p>
           <a href="#plans" className="btn" style={{ padding: '15px 50px', fontSize: '1.1rem' }}>
