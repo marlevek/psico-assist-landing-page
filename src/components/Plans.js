@@ -100,6 +100,17 @@ const PlansSection = styled.section`
         font-size: 0.95rem;
         line-height: 1.5;
       }
+
+      .launch-badge {
+        display: inline-block;
+        margin: 0 0 12px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #edf0ff;
+        color: #5968d9;
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
     }
 
     .features-list {
@@ -233,21 +244,30 @@ const PlansSection = styled.section`
       }
     }
   }
+
+  .pricing-observation {
+    max-width: 760px;
+    margin: 28px auto 0;
+    color: #667085;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    text-align: center;
+  }
 `;
 
 const Plans = () => {
   const plans = [
     {
-      name: 'Teste Gratuito',
+      name: 'Plano Gratuito',
       price: 'R$ 0',
-      period: '/7 dias',
+      period: '/mês',
       description:
-        'Para conhecer a plataforma e avaliar com calma como organizar sua rotina no PsicoSense.',
+        'Para conhecer o PsicoSense e testar os recursos principais com limite mensal.',
       features: [
-        { text: 'Todas as 4 áreas de apoio com IA', checked: true },
-        { text: 'Até 10 documentos gerados', checked: true, limit: '10' },
-        { text: 'Acesso à demonstração completa', checked: true },
-        { text: 'Suporte por email', checked: true },
+        { text: 'Acesso inicial às áreas de apoio com IA', checked: true },
+        { text: 'Limite reduzido de gerações por mês', checked: true },
+        { text: 'Modelos básicos de documentos', checked: true },
+        { text: 'Materiais de exemplo', checked: true },
         { text: 'Sem cartão de crédito', checked: true }
       ],
       buttonText: 'Começar teste grátis',
@@ -258,17 +278,21 @@ const Plans = () => {
     },
     {
       name: 'Psicólogo Individual',
-      price: 'R$ 89',
+      price: 'R$ 59',
       period: '/mês',
+      badge: 'Preço de lançamento',
       description:
-        'Ideal para psicólogos(as) autônomos e consultórios que querem ganhar eficiência.',
+        'Preço especial de lançamento para psicólogos autônomos que querem organizar atendimentos, documentos, agenda e rotina clínica com apoio de IA.',
       features: [
         { text: 'Todas as 4 áreas de apoio com IA', checked: true },
-        { text: 'Documentos ilimitados', checked: true },
-        { text: 'Suporte prioritário', checked: true },
+        { text: 'Documentos salvos ilimitados', checked: true },
+        { text: 'Agenda e organização de sessões', checked: true },
+        { text: 'Apoio para documentos psicológicos', checked: true },
+        { text: 'Exportação em PDF', checked: true },
+        { text: 'Financeiro básico', checked: true },
         { text: 'Backup automático', checked: true },
         { text: 'Atualizações gratuitas', checked: true },
-        { text: 'Exportação em PDF', checked: true }
+        { text: 'Suporte padrão', checked: true }
       ],
       buttonText: 'Começar agora',
       buttonLink: 'https://app.psicosense.com.br/accounts/signup/?plano=profissional',
@@ -278,16 +302,17 @@ const Plans = () => {
     },
     {
       name: 'Estudante',
-      price: 'R$ 49',
+      price: 'R$ 35',
       period: '/mês',
       description:
-        'Para quem está em formação e quer estruturar melhor a rotina com apoio de IA.',
+        'Para estudantes de Psicologia que querem organizar estudos, estágio, casos simulados e materiais com apoio de IA.',
       features: [
         { text: '4 áreas de apoio com IA para estudo e estágio', checked: true },
         { text: 'Até 50 gerações por mês entre casos, atividades e materiais', checked: true, limit: '50' },
-        { text: 'Suporte básico', checked: true },
         { text: 'Exemplos de casos clínicos para estudo', checked: true },
-        { text: 'Materiais educativos e fichas para imprimir', checked: true }
+        { text: 'Materiais educativos e fichas para imprimir', checked: true },
+        { text: 'Suporte básico', checked: true },
+        { text: 'Atualizações gratuitas', checked: true }
       ],
       buttonText: 'Conhecer plano estudante',
       buttonLink: 'https://app.psicosense.com.br/accounts/signup/?plano=estudante',
@@ -325,6 +350,7 @@ const Plans = () => {
             <div key={index} className={`plan-card ${plan.featured ? 'featured' : ''}`}>
               <div className="plan-header">
                 <h3>{plan.name}</h3>
+                {plan.badge && <span className="launch-badge">{plan.badge}</span>}
                 <div className="price">
                   {plan.price}
                   <span className="period">{plan.period}</span>
@@ -350,6 +376,11 @@ const Plans = () => {
             </div>
           ))}
         </div>
+
+        <p className="pricing-observation">
+          Valor especial para os primeiros assinantes. Novos planos poderão ser criados
+          conforme novos recursos forem liberados.
+        </p>
 
         <div className="enterprise-contact">
           <h3>Clínicas, consultórios e equipes</h3>
